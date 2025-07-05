@@ -15,7 +15,7 @@ def prep_image(image_path):
     return sample_file
 
 def extract_text_from_image(image_file, prompt):
-    model = genai.GenerativeModel(model_name="gemini-1.5-pro")
+    model = genai.GenerativeModel(model_name="gemini-2.0-flash-lite")
     response = model.generate_content([image_file, prompt])
     return response.text
 
